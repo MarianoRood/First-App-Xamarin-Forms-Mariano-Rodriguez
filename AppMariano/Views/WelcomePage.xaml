@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMariano.Views.WelcomePage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{AppThemeBinding Light=White, Dark=#2f2f2f}"
+             >
+    <ContentPage.Resources>
+        <Color x:Key="White">White</Color>
+        <Style TargetType="Label">
+            <Setter Property="FontAttributes" Value="Bold, Italic"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                <StackLayout>
+                    <ContentView>
+                        <Image Source="morat.png" VerticalOptions="Center" HeightRequest="304"></Image>
+                    </ContentView>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="30,24,30,24">
+                    <Label Text="¡Bienvenido!" HorizontalTextAlignment="Center" FontSize="30" FontAttributes="Bold" TextColor="{AppThemeBinding Light=Green, Dark=White}"/>
+                    <Label Text="¡Es bueno volverte a ver por aqui!" HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold" TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="30,24,30,24">
+                    <BoxView HorizontalOptions="FillAndExpand" HeightRequest="2" Color="{AppThemeBinding Light=#1690F4, Dark=#AE72E7}"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="30,24,30,24">
+                    <Label Text="Recuerda: 'Hay cosas que olvidamos con los años que valen más'" HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Italic" TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
